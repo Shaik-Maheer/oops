@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GramaSwasthya - AI Health Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1 id="title">GramaSwasthya</h1>
+      <select id="language-select" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="hi">हिंदी</option>
+        <option value="te">తెలుగు</option>
+        <option value="kn">ಕನ್ನಡ</option>
+      </select>
+    </header>
+
+    <div class="accessibility-bar">
+      <button onclick="toggleLargeText()">🔠 Large Text</button>
+      <button onclick="toggleHighContrast()">🌓 High Contrast</button>
+      <button onclick="toggleVoiceMode()">🎧 Voice Only</button>
+    </div>
+
+    <main>
+      <div class="greeting-box">
+        <h2 id="greeting-title">🙏 Namaste!</h2>
+        <p id="greeting-sub">How can I help you today?<br>आज मैं आपकी कैसे सहायता कर सकता हूँ?</p>
+      </div>
+
+      <button class="mic-btn" onclick="startRecognition()">🎙️</button>
+      <p id="speak-text">Tap to speak | बोलने के लिए टैप करें</p>
+      <p id="output"></p>
+
+      <div class="menu-grid">
+        <div class="card" id="symptoms">🩺<br>Check Symptoms<br>लक्षण जानें</div>
+        <div class="card" id="records">📋<br>Health Records<br>स्वास्थ्य रिपोर्ट</div>
+        <div class="card" id="sos">🚨<br>SOS<br>आपातकालीन मदद</div>
+        <div class="card" id="emergency">🆘<br>Emergency Services<br>आपातकाल सेवाएँ</div>
+        <div class="card" id="reminders">⏰<br>Reminders<br>अनुस्मारक</div>
+      </div>
+    </main>
+
+    <footer class="footer-nav">
+      <a href="home.html" id="nav-home">🏠<br>Home</a>
+      <a href="symptoms.html" id="nav-symptoms">🩺<br>Symptoms</a>
+      <a href="records.html" id="nav-records">📋<br>Records</a>
+      <a href="emergency.html" id="nav-emergency">🚨<br>Emergency</a>
+      <a href="reminders.html" id="nav-reminders">⏰<br>Reminders</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
